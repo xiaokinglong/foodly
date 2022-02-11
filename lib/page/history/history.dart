@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/components/baseHeader/index.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({Key? key}) : super(key: key);
@@ -10,8 +11,11 @@ class HistoryPage extends StatefulWidget {
 class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Text('histor'),
+    return const Scaffold(
+      // appBar: const BaseHeader(),
+      body: Center(
+        child: Text('histor'),
+      ),
     );
   }
 }

@@ -10,8 +10,10 @@ class PassPage extends StatefulWidget {
 class _PassPageState extends State<PassPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Text('PassPage'),
+    return const Scaffold(
+      body: Center(
+        child: Text('pass'),
+      ),
     );
   }
 }
