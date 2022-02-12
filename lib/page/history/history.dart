@@ -11,10 +11,33 @@ class HistoryPage extends StatefulWidget {
 class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      // appBar: const BaseHeader(),
-      body: Center(
-        child: Text('histor'),
+    return MaterialApp(
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('123'),
+            bottom: TabBar(
+              onTap: (int index) {
+                print('Selected......$index');
+              },
+              tabs: [
+                Container(
+                  child: const Text("Past Orders"),
+                ),
+                Container(
+                  child: const Text("Upcoming"),
+                ),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            children: [
+              Text('精选'),
+              Text('猜你喜欢'),
+            ],
+          ),
+        ),
       ),
     );
   }
