@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/components/Empty/index.dart';
 import 'package:foodly/components/baseHeader/index.dart';
 
 class HistoryPage extends StatefulWidget {
@@ -17,23 +18,41 @@ class _HistoryPageState extends State<HistoryPage> {
         child: Scaffold(
           appBar: AppBar(
             title: Text('123'),
+            backgroundColor: Colors.white,
             bottom: TabBar(
-              onTap: (int index) {
-                print('Selected......$index');
-              },
+              onTap: (int index) {},
               tabs: [
                 Container(
-                  child: const Text("Past Orders"),
+                  height: 30,
+                  child: const Text(
+                    "Past Orders",
+                    style: TextStyle(
+                      fontSize: 13,
+                      height: 2,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                    ),
+                  ),
                 ),
                 Container(
-                  child: const Text("Upcoming"),
+                  height: 30,
+                  child: const Text(
+                    "Upcoming",
+                    style: TextStyle(
+                      fontSize: 13,
+                      height: 2,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
           body: const TabBarView(
             children: [
-              Text('精选'),
+              Empty(),
+              // Text('精选'),
               Text('猜你喜欢'),
             ],
           ),
