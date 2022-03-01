@@ -49,7 +49,7 @@ class _HistoryPageState extends State<HistoryPage> {
               ],
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
               Empty(),
               // Text('精选'),

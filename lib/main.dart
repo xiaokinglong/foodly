@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/theme/theme.dart';
 
 import 'layout/layout.dart';
 
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // showPerformanceOverlay: true,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: AppTheme.light,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

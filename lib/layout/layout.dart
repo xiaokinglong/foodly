@@ -3,6 +3,7 @@ import 'package:foodly/page/history/history.dart';
 import 'package:foodly/page/home/home.dart';
 import 'package:foodly/page/pass/pass.dart';
 import 'package:foodly/page/search/search.dart';
+import 'package:foodly/page/test/test.dart';
 import 'package:foodly/page/user/user.dart';
 
 class LayoutPage extends StatefulWidget {
@@ -13,21 +14,21 @@ class LayoutPage extends StatefulWidget {
 }
 
 class _LayoutPageState extends State<LayoutPage> {
-  int _currentIndex = 3;
+  int _currentIndex = 2;
 
   final bodyList = [
     const HomePage(),
     const SearchPage(),
     const HistoryPage(),
     const UserPage(),
-    const PassPage()
+    const PassPage(),
+    TestPage()
   ];
   var currentBody;
 
   @override
   void initState() {
     super.initState();
-    // _currentIndex = 0;
     currentBody = bodyList[_currentIndex];
   }
 
@@ -66,6 +67,10 @@ class _LayoutPageState extends State<LayoutPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.airplane_ticket_sharp),
             label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.airplane_ticket_sharp),
+            label: '测试',
           ),
         ],
       ),
